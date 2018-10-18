@@ -1,0 +1,20 @@
+﻿<Window x:Class="SettingsLab.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SettingsLab"
+        mc:Ignorable="d"
+        Title="Settings Lab" Height="450" Width="302.805">
+    
+    <Grid>
+        <StackPanel>
+            <Label Content="Name: " Margin="5"></Label>
+            <TextBox Name="tbxName" Text="{Binding Source={StaticResource settings}, Path=Default.Name, Mode=OneTime}" Margin="5"></TextBox>
+            <Label Content="Age: " Margin="5"></Label>
+            <TextBox Name="tbxAge" Text="{Binding Source={StaticResource settings}, Path=Default.Age}" Margin="5"></TextBox>
+            <Button Name="RollBackBtn" Content="Roll-Back" Margin="5" Click="RollBackBtn_Click"></Button>
+            <Button Name="DefaultBtn" Content="Default" Margin="5" Click="DefaultBtn_Click"></Button>
+</StackPanel>
+    </Grid>
+</Window>
